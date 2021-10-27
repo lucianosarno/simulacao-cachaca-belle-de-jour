@@ -8,25 +8,26 @@
 }
 
 .body__header {
-  margin: auto;
+  margin: 0;
 }
 
 .body__main {
-  /* margin: 100px 0; */
+  margin: 0;
 }
 
 .header {
   display: flex;
-  height: 100px;
-  width: 100%;
+  height: 20mm;
+  width: 190mm;
+  padding: 5mm;
 }
 
 .header__logo {
-  margin: 5mm;
+  margin: 0;
 }
 
 .header__titulo {
-  margin: auto;
+  margin: 0;
 }
 
 .lista {
@@ -58,11 +59,12 @@
 }
 
 .titulo {
-  height: 18.7mm;
+  width: 130mm;
+  height: 15mm;
   font-size: 5mm;
-  line-height: 30px;
+  line-height: 7.5mm;
+  padding: 1.85mm;
   text-align: center;
-  vertical-align: bottom;
 }
 
 .topico {
@@ -90,7 +92,7 @@ main {
 
 @page {
   size: A4;
-  margin: 20mm;
+  margin: 0;
 }
 
 @media print {
