@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+.lista__topico {
+  margin-top: 42px;
+}
+
 .logo {
   width: 20%;
   min-width: 150px;
@@ -20,6 +24,7 @@
 .text {
   text-align: justify;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .text-destaque {
