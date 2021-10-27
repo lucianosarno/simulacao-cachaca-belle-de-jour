@@ -124,18 +124,33 @@
       <li>Indicando Outros Parceiros da Cachaça Belle de Jour</li>
     </dt>
     <dd class="lista__detalhe detalhe">
-      <p class="text">Indicando outras pessoas a se tornarem parceiras da Cachaça Belle de Jour, você recebe
-        participação em todas as vendas.</p>
-      <p class="text">Ao realizar a compra com qualquer um destes códigos, o cliente recebe um desconto de 10%
-        (incentivando-o a não se esquecer de usar o código na hora da compra).Tanto seu estabelecimento
-        quanto seus garçons recebem participação sobre as vendas realizadas em nosso site com estes códigos.</p>
-      <p class="text">Tanto seu estabelecimento
-        quanto seus garçons recebem participação sobre as vendas realizadas em nosso site com estes códigos.</p>
-      <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque">${Pretende_Divulgar}</span>.
+      <p class="text">Indicando diretamente outras pessoas a se tornarem parceiras da Cachaça Belle de Jour, você recebe
+        um percentual de ${MMN_Nivel_1}% em todas as vendas realizadas por seus indicados.</p>
+      <p class="text">Caso seus indicados também indiquem novos parceiros, você recebe
+        um percentual de ${MMN_Nivel_2}% em todas as vendas realizadas pelos parceiros trazidos por seus indicados.</p>
+      <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque">${Pretende_Incentivar}</span>.
       </p>
-      <p class="text">Considerando que seu estabelecimento possua ${Numero_de_Garcons} garçons, e que cada um deles
-        realize ${Garrafas_Garcom_Mes} vendas por mês com uso de seu código promocional, seus ganhos com a divulgação do
-        nosso site será <span class="text-destaque">${RS_Mes_Divulgar_Site_Estabelecimento}</span>.</p>
+      <p class="text">Para estimar seus ganhos, consideramos que:</p>
+      <ul>
+        <li>Você indique diretamente ${Numero_de_Parceiros} parceiros da Cachaça Belle de Jour (que serão chamados
+          parceiros N1)</li>
+        <li>Entre os parceiros indicados por você, pelo menos metade deles indique mais ${Numero_de_Parceiros} novos
+          parceiros (que serão chamados parceiros N2).</li>
+        <li>Do mesmo modo, metade dos parceiros N2 também indicarão mais ${Numero_de_Parceiros} novos
+          parceiros (que serão chamados parceiros N3).</li>
+        <li>Tanto você quanto cada um dos parceiros indicados (N1, N2 e N3) realizem ${Garrafas_Parceiro_Mes} vendas por
+          mês.
+        </li>
+      </ul>
+      <p class="text">Neste caso, seus ganhos mensais serão:</p>
+      <ul>
+        <li>${RS_Mes_Incentivar_Outras_Pessoas_N1} referente à sua participação nas vendas dos parceiros indicados
+          diretamente por você (N1).</li>
+        <li>${RS_Mes_Incentivar_Outras_Pessoas_N2} referente à sua participação nas vendas dos parceiros N2.</li>
+        <li>${RS_Mes_Incentivar_Outras_Pessoas_N3} referente à sua participação nas vendas dos parceiros N3.</li>
+      </ul>
+      <p class="text">Deste modo, seus ganhos totais serão de <span
+          class="text-destaque">${RS_Mes_Incentivar_Outras_Pessoas_Total}</span>.</p>
     </dd>
     </dl>
   </ol>
