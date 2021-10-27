@@ -59,7 +59,7 @@
 
 .titulo {
   height: 18.7mm;
-  font-size: 10mm;
+  font-size: 5mm;
   line-height: 30px;
   text-align: center;
   vertical-align: bottom;
@@ -88,6 +88,11 @@ main {
   border: 1px solid blue;
 }
 
+@page {
+  size: A4;
+  margin: 20mm;
+}
+
 @media print {
   .body__header {
     position: fixed;
@@ -100,7 +105,6 @@ main {
     margin: 100px 0;
   }
   body, html {
-    width: 210mm;
-    height: 297mm;
+    margin: 0;
   }
 }
