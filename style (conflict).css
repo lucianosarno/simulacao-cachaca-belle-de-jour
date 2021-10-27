@@ -22,7 +22,7 @@
 }
 
 .header__logo {
-  margin: 5mm;
+  margin: 6.5mm;
 }
 
 .header__titulo {
@@ -43,7 +43,7 @@
 
 .logo {
   width: 30mm;
-  height: 18.7mm;
+  height: 20mm;
 }
 
 .text {
@@ -59,8 +59,8 @@
 
 .titulo {
   height: 18.7mm;
-  font-size: 10mm;
-  line-height: 30px;
+  font-size: 5mm;
+  padding: line-height: 7.5mm;
   text-align: center;
   vertical-align: bottom;
 }
