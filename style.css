@@ -25,17 +25,16 @@
 
 .header__logo {
   margin: auto;
-  width: 20%;
+  width: 25%;
   min-width: 120px;
-  max-width: 240px;
-  /* height: 18.7mm; */
+  max-width: 360px;
 }
 
 .header__titulo {
   margin: auto;
-  width: 80%;
-  /* max-width: 480px; */
-  height: 15mm;
+  width: 75%;
+  min-width: 360px;
+  max-width: 1080px;
 }
 
 .lista {
@@ -50,7 +49,9 @@
   margin-top: 42px;
 }
 
-.logo {}
+.logo {
+  padding: 5px;
+}
 
 .text {
   text-align: justify;
@@ -64,9 +65,9 @@
 }
 
 .titulo {
-  font-size: 6mm;
-  line-height: 9mm;
-  padding: 0mm 10mm;
+  font-size: calc(12px + 1.5vw);
+  line-height: calc(18px + 2.25vw);
+  padding: 5px;
   text-align: center;
   vertical-align: middle;
 }
@@ -100,24 +101,21 @@ main {
 
 @media print {
   .body__header {
-    position: fixed;
-    top: 0;
-  }
-  .body__main {
-    position: absolute;
-    top: 50mm;
-  }
-  .header {
-    width: 170mm;
-    height: 30mm;
+    height: auto;
   }
   .header__logo {
     width: 30mm;
     max-width: 30mm;
+    height: 18.7mm;
+    padding: 0;
+    border: 1px solid yellow;
   }
   .header__titulo {
     width: 140mm;
     max-width: 140mm;
+    height: 15mm;
+    padding: 0;
+    border: 1px solid pink;
   }
   .titulo {
     font-size: 6mm;
