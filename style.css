@@ -5,6 +5,7 @@
   text-align: center;
   margin: 0;
   font-family: Montserrat;
+  padding: 2% 10%;
 }
 
 .body__header {
@@ -26,15 +27,15 @@
 .header__logo {
   margin: auto;
   width: 25%;
-  min-width: 120px;
-  max-width: 360px;
+  height: auto;
+  min-width: 150px;
+  max-width: 200px;
 }
 
 .header__titulo {
   margin: auto;
   width: 75%;
-  min-width: 360px;
-  max-width: 1080px;
+  max-width: 600px;
 }
 
 .lista {
@@ -65,9 +66,9 @@
 }
 
 .titulo {
-  font-size: calc(12px + 1.5vw);
-  line-height: calc(18px + 2.25vw);
-  padding: 5px;
+  font-size: calc(12px + 1vw);
+  line-height: calc(18px + 1.5vw);
+  padding: 20px 5px;
   text-align: center;
   vertical-align: middle;
 }
@@ -96,30 +97,28 @@ main {
 }
 
 @page {
-  margin: 20mm;
+  margin: 15mm;
 }
 
 @media print {
+  .body {
+    padding: 0;
+  }
   .body__header {
     height: auto;
   }
+  .header {
+    padding: 5mm;
+  }
   .header__logo {
-    width: 30mm;
     max-width: 30mm;
-    height: 18.7mm;
-    padding: 0;
-    border: 1px solid yellow;
   }
   .header__titulo {
-    width: 140mm;
-    max-width: 140mm;
-    height: 15mm;
-    padding: 0;
-    border: 1px solid pink;
+    max-width: 130mm;
   }
   .titulo {
-    font-size: 6mm;
-    line-height: 9mm;
-    padding: 0mm 10mm;
+    font-size: 5mm;
+    line-height: 7.5mm;
+    padding: 5mm;
   }
 }
