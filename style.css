@@ -3,12 +3,13 @@
   background: #fff;
   color: #260000;
   text-align: center;
-  margin: 75px;
+  margin: 0;
   font-family: Montserrat;
 }
 
 .body__header {
   margin: 0;
+  width: 100%;
 }
 
 .body__main {
@@ -17,17 +18,24 @@
 
 .header {
   display: flex;
-  height: 20mm;
-  width: 190mm;
-  padding: 5mm;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 5%;
 }
 
 .header__logo {
-  margin: 0;
+  margin: auto;
+  width: 20%;
+  min-width: 120px;
+  max-width: 240px;
+  /* height: 18.7mm; */
 }
 
 .header__titulo {
-  margin: 0;
+  margin: auto;
+  width: 80%;
+  /* max-width: 480px; */
+  height: 15mm;
 }
 
 .lista {
@@ -42,10 +50,7 @@
   margin-top: 42px;
 }
 
-.logo {
-  width: 30mm;
-  height: 18.7mm;
-}
+.logo {}
 
 .text {
   text-align: justify;
@@ -59,12 +64,11 @@
 }
 
 .titulo {
-  width: 130mm;
-  height: 15mm;
-  font-size: 5mm;
-  line-height: 7.5mm;
-  padding: 1.85mm;
+  font-size: 6mm;
+  line-height: 9mm;
+  padding: 0mm 10mm;
   text-align: center;
+  vertical-align: middle;
 }
 
 .topico {
@@ -75,10 +79,10 @@
 
 * {
   /* border: 1px solid red; */
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   border: 1px solid red;
 }
 
@@ -91,8 +95,7 @@ main {
 }
 
 @page {
-  size: A4;
-  margin: 0;
+  margin: 20mm;
 }
 
 @media print {
@@ -100,13 +103,25 @@ main {
     position: fixed;
     top: 0;
   }
-  .header {
-    height: 100px;
-  }
   .body__main {
-    margin: 100px 0;
+    position: absolute;
+    top: 50mm;
   }
-  body, html {
-    margin: 0;
+  .header {
+    width: 170mm;
+    height: 30mm;
+  }
+  .header__logo {
+    width: 30mm;
+    max-width: 30mm;
+  }
+  .header__titulo {
+    width: 140mm;
+    max-width: 140mm;
+  }
+  .titulo {
+    font-size: 6mm;
+    line-height: 9mm;
+    padding: 0mm 10mm;
   }
 }
