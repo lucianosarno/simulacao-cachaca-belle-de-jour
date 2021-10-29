@@ -15,6 +15,7 @@
 
 .body__main {
   margin: 0;
+  padding: 50px;
 }
 
 .header {
@@ -57,18 +58,22 @@
 .tabela {
   text-align: center;
   height: 50px;
+  margin: auto;
 }
 
 .tabela-linha {
   border-bottom: 1px dotted black;
+  padding: 10px;
 }
 
 .tabela-sup {
   border-bottom: 1px solid black;
+  padding: 10px;
 }
 
 .tabela-footer {
   border-top: 1px solid black;
+  padding: 10px;
 }
 
 .text {
@@ -111,6 +116,9 @@
   }
   .body__header {
     height: auto;
+  }
+  .body__main {
+    padding: 0;
   }
   .header {
     padding: 5mm;
