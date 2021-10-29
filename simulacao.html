@@ -166,9 +166,20 @@
                 <li class="text">Uma média de <%=simulacaoRec.Drinks_Mes%> drinks vendidos mensalmente.</li>
                 <li class="text">Valor de R$<%=simulacaoRec.RS_Drink%> por drink.</li>
               </ul>
-              <p class="text">Neste caso, seu ganho com a venda do drink La Belle é de <span
+              <p class="text">Considerando o cálculo:</p>
+              <p class="text text-calculo">R$<%=RS_Dose_Lucro%> /dose (lucro)
+              </p>
+              <p class="text text-calculo"> x 1 dose/drink
+              </p>
+              <p class="text text-calculo"> x <%=simulacaoRec.Drinks_Mes%> doses/mês
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Drink%> /mês
+                </span>
+              </p>
+              <p class="text">Neste caso, seu ganho com a venda do drink La Belle é de:<span
                   class="text-destaque1 text-destaque2">
-                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Drink%></span>.</p>
+                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Drink%>/mês</span>.</p>
             </dd>
           </article>
           <article class="lista__secao">
@@ -183,7 +194,32 @@
                   <%=simulacaoRec.Pretende_Revender_Garrafa%>
                 </span>.
               </p>
-              <p class="text">Considerando uma média de <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> garrafas vendidas
+              <p class="text">Adquirindo as garrafas da Cachaça Belle de Jour você obtém o desconto acumulado de:</p>
+              <p class="text text-calculo">
+                <%=mmnCliente%>% (desconto que seu cliente receberia comprando com seu código)
+              </p>
+              <p class="text text-calculo"> + <%=simulacaoRec.MMN_Nivel_0%>% (sua comissão de afiliado)
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+                </span>
+              </p>
+              <p class="text">Considerando:</p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+                </span>
+              </p>
+              <p class="text">Resumindo, com uma média de <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> garrafas
+                  vendidas
                   mensalmente, seu
                   ganho
                   com a venda das garrafas da Cachaça Belle de Jour é de <span class="text-destaque1 text-destaque2">
