@@ -54,6 +54,10 @@
   padding: 5px;
 }
 
+.tabela {
+  text-align: center;
+}
+
 .text {
   text-align: justify;
   font-size: 14px;

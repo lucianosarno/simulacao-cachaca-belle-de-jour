@@ -242,7 +242,8 @@
       <dd class="lista__detalhe detalhe">
         <p class="text">Considerando todos os dados mencionados neste documento, estimamos seus ganhos totais sendo
           parceiro da Cachaça Belle de Jour:
-        <table>
+        </p>
+        <table class="tabela">
           <thead>
             <tr>
               <th>Tipo de Parceria</th>
@@ -270,11 +271,28 @@
               <td>R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%>
               </td>
             </tr>
+            <tr>
+              <td>Divulgando o site da Cachaça Belle de Jour em Seu Estabelecimento</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>
+              </td>
+            </tr>
+            <tr>
+              <td>Indicando Outros Parceiros da Cachaça Belle de Jour</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_Total%>
+              </td>
+            </tr>
+            <tr>
+              <td>Revendendo Pessoalmente a Cachaça Belle de Jour</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Revender_Amigos%>
+              </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="text-destaque">R$<%=simulacaoRec.RS_Mes_Total%>/mês.
+              </td>
+            </tr>
           </tbody>
         </table>
-        em R$<span class="text-destaque">
-          R$<%=simulacaoRec.RS_Mes_Total%>
-        </span>/mês.</p>
       </dd>
     </ol>
     <p class="text">Caso tenha quaisquer dúvidas a respeito desta simulação, não hesite em entrar em contato via <a
