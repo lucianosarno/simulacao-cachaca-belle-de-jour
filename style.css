@@ -1,9 +1,3 @@
-.action {
-  background-color: #044E78;
-  color: white;
-  text-decoration: none;
-}
-
 .body {
   font-family: system-ui;
   background: #fff;
@@ -22,6 +16,31 @@
 .body__main {
   margin: 0;
   padding: 50px;
+}
+
+.botao {
+  background-color: #044E78;
+  color: white;
+  text-decoration: none;
+}
+
+.call_to_action {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.call_to_action__botao {
+  display: inline-block;
+  margin: 10px auto;
+  width: 250px;
+  min-width: 250px;
+  height: 60px;
+}
+
+.encerra__call_to_action {
+  width: 100%;
+  margin: auto;
 }
 
 .header {
@@ -45,12 +64,6 @@
   max-width: 600px;
 }
 
-.main__action {
-  display: block;
-  width: 150px;
-  height: 30px;
-}
-
 .lista {
   padding: 0 0 0 15px;
 }
@@ -69,6 +82,10 @@ lista__secao {
 
 .logo {
   padding: 5px;
+}
+
+.main__encerra {
+  width: 100%;
 }
 
 .tabela {
