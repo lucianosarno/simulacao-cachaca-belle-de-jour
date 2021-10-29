@@ -194,9 +194,10 @@
                   <%=simulacaoRec.Pretende_Revender_Garrafa%>
                 </span>.
               </p>
-              <p class="text">Adquirindo as garrafas da Cachaça Belle de Jour você obtém o desconto acumulado de:</p>
+              <p class="text">Adquirindo as garrafas da Cachaça Belle de Jour para revender, você obtém o desconto
+                acumulado de:</p>
               <p class="text text-calculo">
-                <%=mmnCliente%>% (desconto que seu cliente receberia comprando com seu código)
+                <%=mmnCliente%>% (desconto do seu cliente)
               </p>
               <p class="text text-calculo"> + <%=simulacaoRec.MMN_Nivel_0%>% (sua comissão de afiliado)
               </p>
@@ -215,7 +216,7 @@
                 <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
               </p>
               <p class="text text-calculo"><span class="text-resultado"> =
-                  <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%> /mês
                 </span>
               </p>
               <p class="text">Resumindo, com uma média de <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> garrafas
@@ -223,7 +224,7 @@
                   mensalmente, seu
                   ganho
                   com a venda das garrafas da Cachaça Belle de Jour é de <span class="text-destaque1 text-destaque2">
-                    R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%></span>.</p>
+                    R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%> /mês</span>.</p>
             </dd>
           </article>
 
@@ -236,7 +237,7 @@
                 recebe
                 um código promocional exclusivo para divulgação entre seus Clientes.</p>
               <p class="text">Ao realizar a compra com qualquer um destes códigos, o cliente recebe um desconto de 10%
-                (incentivando-o a não se esquecer de usar o código na hora da compra).</p>
+                (como incentivo a não se esquecer de usar o código na hora da compra).</p>
               <p class="text">Tanto seu estabelecimento
                 quanto seus garçons recebem participação sobre as vendas realizadas em nosso site com estes códigos.</p>
               <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
