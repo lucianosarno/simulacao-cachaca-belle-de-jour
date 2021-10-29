@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    Simulação de Ganhos de Parceiro da Cachaça Belle de Jour
+  </title>
+  <link data-rh="true" rel="shortcut icon" href="images/favicone.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/cbdf2b0f0e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+  <header class="body__header header" id="header">
+    <img class="header__logo logo"
+      src="https://drive.google.com/uc?id=194fuEg6-UqOTOthHLNbta33tD4Huisn8&export=download">
+    <h1 class="header__titulo titulo">Simulação de Ganhos dos Parceiros da Cachaça Belle de Jour</h1>
+  </header>
+  <main class="body__main main">
+    <section class="main__intro intro">
+      <p class="text">Olá <%=simulacaoRec.Nome%>,</p>
+      <p class="text">Obrigado por seu interesse em ser parceiro da Cachaça Belle de Jour!</p>
+      <p class="text">Como você provavelmente percebeu em nosso formulário e outros materiais de divulgação, existem
+        diversas formas de estabelecer uma parceria com a Cachaça Belle de Jour, as quais detalhamos a seguir.</p>
+
+    </section>
+    <section class="main__topicos topicos">
+      <h2>Estimativas de Ganhos</h2>
+      <p class="text">Baseados nas suas respostas ao nosso formulário, fizemos uma estimativa dos potenciais ganhos que
+        você
+        pode obter através da revenda da Cachaça Belle de Jour e do nosso Programa de Parcerias.</p>
+      <p class="text">Para os cálculos que apresentamos a seguir, para efeitos de simplificação, foi considerado que
+        todas
+        as vendas são no valor equivalente a 1 (uma) unidade do produto abaixo:</p>
+      <p class="text text-destaque1 text-destaque2">
+        <%=produtoRefRec.Titulo%> | <%=produtoRefRec.Volume_ml%> ml | R$<%=produtoRefRec.Preco_de_Venda%>
+      </p>
+      <ol class="lista">
+        <dl>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Iniciando Parcerias Entre a Cachaça Belle de Jour e Estabelecimentos Comerciais</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Sempre que você apresenta a Cachaça Belle de Jour a um estabelecimento comercial (como
+                bares,
+                restaurantes ou similares) e uma parceria de vendas é estabelecida, você automaticamente receberá ganhos
+                por
+                todas as vendas da Cachaça Belle de Jour neste local, por prazo indeterminado.</p>
+              <p class="text">Sua resposta para este item foi <span class="text text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Iniciar_Parcerias%>
+                </span>.</p>
+              <p class="text">Sendo assim, estimamos seus ganhos baseados em uma média de
+                <%=simulacaoRec.Garcons_Estabelecimento_Iniciar_Parcerias%> garçons para cada estabelecimento parceiro.
+                  Além
+                  disso,
+                  estimamos
+                  que cada garçom realizará <%=simulacaoRec.Garrafas_Garcom_Mes_Representante%> vendas mensais, usando
+                    seu
+                    código promocional
+                    exclusivo que será fornecido assim que se cadastrar como parceiro da Cachaça Belle de Jour.
+              </p>
+              <p class="text">Para cada uma destas vendas, você receberá um percentual de <%=simulacaoRec.MMN_Nivel_3%>
+                  %.
+              </p>
+              <p class="text">O resumo desta possibilidade de ganhos é:</p>
+              <ul>
+                <li class="text">
+                  <%=simulacaoRec.Numero_de_Estabelecimentos%> estabelecimentos cuja parceria com a Cachaça bBelle de
+                    Jour
+                    foi
+                    iniciada por você.
+                </li>
+                <li class="text">Média de <%=simulacaoRec.Garcons_Estabelecimento_Iniciar_Parcerias%> garçons em cada
+                    estabelecimento.</li>
+                <li class="text">Média mensal de <%=simulacaoRec.Garrafas_Garcom_Mes_Representante%> vendas realizadas
+                    por
+                    cada um
+                    dos garçons.
+                </li>
+              </ul>
+              <p class="text">Os seus ganhos estimados iniciando parcerias entre a Cachaça Belle de Jour e os
+                estabelecimentos
+                são de:</p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Numero_de_Estabelecimentos%> estabelecimentos
+              </p>
+              <p class="text text-calculo">
+                x <%=simulacaoRec.Garcons_Estabelecimento_Iniciar_Parcerias%> garçons/estabelecimento
+              </p>
+              <p class="text text-calculo">
+                x <%=simulacaoRec.Garrafas_Garcom_Mes_Representante%> vendas/garçom/mês</p>
+              <p class="text text-calculo">
+                x R$<%=produtoRefRec.Preco_de_Venda%> /venda</p>
+              <p class="text text-calculo">
+                x <%=simulacaoRec.MMN_Nivel_3%>%</p>
+              <p class="text text-calculo">
+                <span class="text-resultado"> = R$<%=simulacaoRec.RS_Mes_Iniciar_Parcerias%> / mês</span>
+              </p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Revendendo a Cachaça Belle de Jour Em Seu Estabelecimento (Por Dose)</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">A Cachaça Belle de Jour oferece uma ótima margem de lucro para revenda de doses em seu
+                estabelecimento.</p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Iniciar_Parcerias%>
+                </span>.</p>
+
+              <p class="text">O custo de cada dose, para seu estabelecimento, será:</p>
+              <p class="text text-calculo">
+                <%=doseVolumeMl%> ml/dose
+              </p>
+              <p class="text text-calculo"> x R$<%=produtoRefRec.Preco_de_Venda%> /garrafa
+              </p>
+              <p class="text text-calculo"> ÷ <%=produtoRefRec.Volume_ml%> ml
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$<%=RS_Dose_Custo%> /dose (custo)
+                </span>
+              </p>
+              <p class="text">Para cada dose, seu lucro será de:</p>
+              <p class="text text-calculo">R$<%=simulacaoRec.RS_Dose%> /dose (venda)
+              </p>
+              <p class="text text-calculo"> - <%=RS_Dose_Custo%> /dose (custo)
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$<%=RS_Dose_Lucro%> /dose (lucro)
+                </span>
+              </p>
+              <p class="text">Considerando o cálculo:</p>
+              <p class="text text-calculo">R$<%=RS_Dose_Lucro%> /dose
+              </p>
+              <p class="text text-calculo"> x <%=simulacaoRec.Doses_Mes%> doses/mês
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Dose%> /mês
+                </span>
+              </p>
+              <p class="text">Neste caso, seu ganho com a revenda de doses da Cachaça Belle de Jour é de: <span
+                  class="text-destaque2"> R$
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Dose%> /mês
+                </span>.</p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Revendendo o Drink La Belle Em Seu Estabelecimento</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Um drink pode ser um atrativo adicional, especialmente entre consumidores que são
+                menos apreciadores de cachaça. Pensando nisto, criamos o drink La Belle, cuja receita é de fácil
+                execução.
+              </p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Revender_Drink%>
+                </span>.
+              </p>
+              <p class="text">Uma estimativa dos lucros que podem ser obtidos com a venda do drink La Belle é
+                feita a seguir, considerando:</p>
+              <ul>
+                <li class="text">Uma média de <%=simulacaoRec.Drinks_Mes%> drinks vendidos mensalmente.</li>
+                <li class="text">Valor de R$<%=simulacaoRec.RS_Drink%> por drink.</li>
+              </ul>
+              <p class="text">Considerando o cálculo:</p>
+              <p class="text text-calculo">R$<%=RS_Dose_Lucro%> /dose (lucro)
+              </p>
+              <p class="text text-calculo"> x 1 dose/drink
+              </p>
+              <p class="text text-calculo"> x <%=simulacaoRec.Drinks_Mes%> doses/mês
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Drink%> /mês
+                </span>
+              </p>
+              <p class="text">Neste caso, seu ganho com a venda do drink La Belle é de:<span
+                  class="text-destaque1 text-destaque2">
+                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Drink%>/mês</span>.</p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Revendendo Garrafas da Cachaça Belle de Jour em Seu Estabelecimento</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Além da revenda em doses, a revenda das garrafas da Cachaça Belle de Jour também oferece
+                ótima
+                margem de lucro, que estimamos a seguir.</p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Revender_Garrafa%>
+                </span>.
+              </p>
+              <p class="text">Adquirindo as garrafas da Cachaça Belle de Jour para revender, você obtém o desconto
+                acumulado de:</p>
+              <p class="text text-calculo">
+                <%=mmnCliente%>% (desconto do seu cliente)
+              </p>
+              <p class="text text-calculo"> + <%=simulacaoRec.MMN_Nivel_0%>% (sua comissão de afiliado)
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+                </span>
+              </p>
+              <p class="text">Considerando:</p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=mmnCliente+simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%> /mês
+                </span>
+              </p>
+              <p class="text">Resumindo, com uma média de <%=simulacaoRec.Garrafas_Mes_Estabelecimento%> garrafas
+                  vendidas
+                  mensalmente, seu
+                  ganho
+                  com a venda das garrafas da Cachaça Belle de Jour é de <span class="text-destaque1 text-destaque2">
+                    R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%> /mês</span>.</p>
+            </dd>
+          </article>
+
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Divulgando o site da Cachaça Belle de Jour em Seu Estabelecimento</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Divulgando o site da Cachaça Belle de Jour em seu estabelecimento, cada um de seus garçons
+                recebe
+                um código promocional exclusivo para divulgação entre seus Clientes.</p>
+              <p class="text">Ao realizar a compra com qualquer um destes códigos, o cliente recebe um desconto de 10%
+                (como incentivo a não se esquecer de usar o código na hora da compra).</p>
+              <p class="text">Tanto seu estabelecimento
+                quanto seus garçons recebem participação sobre as vendas realizadas em nosso site com estes códigos.</p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Divulgar%>
+                </span>.
+              </p>
+              <p class="text">Considerando:</p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Numero_de_Garcons%> garçons
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_1%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%> /mês
+                </span>
+              </p>
+              <p class="text">Ou seja, caso estabelecimento possua <%=simulacaoRec.Numero_de_Garcons%> garçons e cada um
+                  deles efetue <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês em nosso site com o código promocional,
+                    os
+                    ganhos
+                    do seu
+                    estabelecimento
+                    com a divulgação do site da Cachaça Belle de Jour serão de <span
+                      class="text-destaque1 text-destaque2">
+                      R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>/mês
+                    </span>.</p>
+              <p class="text">Além disto, em relação aos garçons do seu estabelecimento, que receberão uma participação
+                de <%=simulacaoRec.MMN_Nivel_0%>% sobre suas próprias vendas:</p>
+
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%> /mês
+                </span>
+              </p>
+              <p class="text">Deste modo, no cenário descrito acima, cada um de seus garçons receberá uma participação
+                de <span class="text-destaque1 text-destaque2"> R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%>
+                    /mês</span>.
+              </p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Indicando Outros Parceiros da Cachaça Belle de Jour</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Indicando diretamente outras pessoas a se tornarem parceiras da Cachaça Belle de Jour,
+                você
+                recebe
+                um percentual de <%=simulacaoRec.MMN_Nivel_1%>% em todas as vendas realizadas por seus indicados, que
+                  serão
+                  chamados
+                  parceiros
+                  N1.</p>
+              <p class="text">Caso seus indicados também indiquem novos parceiros, você recebe
+                um percentual de <%=simulacaoRec.MMN_Nivel_2%>% em todas as vendas realizadas pelos parceiros trazidos
+                  por
+                  seus indicados,
+                  que
+                  serão seus parceiros N2.</p>
+              <p class="text">Sucessivamente, caso seus parceiros N2 indiquem novos parceiros, estes serão chamados
+                parceiros
+                N3
+                e você receberá um percentual de <%=simulacaoRec.MMN_Nivel_3%>% em todas as vendas realizadas por eles.
+              </p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Incentivar%>
+                </span>.
+              </p>
+              <p class="text">Para estimar seus ganhos, consideramos que:</p>
+              <ul>
+                <li class="text">Você indique diretamente <%=simulacaoRec.Numero_de_Parceiros%> parceiros da Cachaça
+                    Belle
+                    de
+                    Jour (parceiros
+                    N1).</li>
+                <li class="text">Entre os parceiros indicados por você, pelo menos metade deles indique mais
+                  <%=simulacaoRec.Numero_de_Parceiros%> novos
+                    parceiros (parceiros N2).
+                </li>
+                <li class="text">Do mesmo modo, metade dos parceiros N2 também indicarão mais
+                  <%=simulacaoRec.Numero_de_Parceiros%> novos
+                    parceiros (parceiros N3).
+                </li>
+                <li class="text">Tanto você quanto cada um dos parceiros indicados (N1, N2 e N3) realizem, cada um,
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas por
+                    mês.
+                </li>
+              </ul>
+              <p class="text">Neste caso, seus ganhos mensais serão:</p>
+              <ul>
+                <li class="text">
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%>/mês referente à sua participação nas vendas
+                    dos
+                    parceiros
+                    indicados
+                    diretamente por você (chamados parceiros N1):
+                </li>
+                <p class="text text-calculo">
+                  <%=simulacaoRec.Numero_de_Parceiros%> parceiros N1
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_1%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%> /mês
+                  </span>
+                </p>
+                <li class="text">
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%>/mês referente à sua participação nas vendas
+                    dos
+                    parceiros
+                    N2.
+                </li>
+                <p class="text text-calculo">Metade dos <%=simulacaoRec.Numero_de_Parceiros%> parceiros N1
+                    indicam um total de:
+                </p>
+                <p class="text text-calculo">
+                  <%=nParceirosN2%> parceiros N2
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_2%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%> /mês
+                  </span>
+                </p>
+                <li class="text">
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%> referente à sua participação nas vendas dos
+                    parceiros
+                    N3.
+                </li>
+                <p class="text text-calculo">Metade dos <%=nParceirosN2%> parceiros N2
+                    indicam um total de:
+                </p>
+                <p class="text text-calculo">
+                  <%=nParceirosN3%> parceiros N3
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_3%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%> /mês
+                  </span>
+                </p>
+              </ul>
+              <p class="text">Deste modo, considerando os valores acima, o total de seus ganhos com a indicação de novos
+                parceiros <span class="text-destaque1 text-destaque2">
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_Total%>
+                </span>.</p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Revendendo Pessoalmente a Cachaça Belle de Jour</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Por último, você também recebe um percentual de <%=simulacaoRec.MMN_Nivel_0%>% em todas as
+                  vendas realizadas em
+                  nosso site através do seu código promocional de afiliado.</p>
+              <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
+                  <%=simulacaoRec.Pretende_Revender_Amigos%>
+                </span>.
+              </p>
+              <p class="text">
+                Considere o cálculo a seguir:
+              </p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Garrafas_Mes_Amigos%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Revender_Amigos%> /mês
+                </span>
+              </p>
+              <p class="text">Caso sejam feitas <%=simulacaoRec.Garrafas_Mes_Amigos%> vendas por mês com uso do seu
+                  código,
+                  seus ganhos serão
+                  de <span class="text-destaque1 text-destaque2">
+                    R$<%=simulacaoRec.RS_Mes_Revender_Amigos%>/mês
+                  </span>.</p>
+            </dd>
+          </article>
+          <article class="lista__secao">
+            <dt class="lista__topico topico">
+              <li>Total de Ganhos</li>
+            </dt>
+            <dd class="lista__detalhe detalhe">
+              <p class="text">Considerando todos os dados mencionados neste documento, estimamos seus ganhos totais
+                sendo
+                parceiro da Cachaça Belle de Jour:
+              </p>
+              <table class="tabela">
+                <thead>
+                  <tr>
+                    <th class="tabela-sup">Tipo de Parceria</th>
+                    <th class="tabela-sup">Estimativa de Ganho Mensal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tabela-linha">Iniciando Parcerias Entre a Cachaça Belle de Jour e Estabelecimentos
+                      Comerciais
+                    </td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Iniciar_Parcerias%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Revendendo a Cachaça Belle de Jour Em Seu Estabelecimento (Por Dose)</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Revender_Local_Dose%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Revendendo o Drink La Belle Em Seu Estabelecimento</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Revender_Local_Drink%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Revendendo Garrafas da Cachaça Belle de Jour em Seu Estabelecimento</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Divulgando o site da Cachaça Belle de Jour em Seu Estabelecimento</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N1</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N2*</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N3*</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Revendendo Pessoalmente a Cachaça Belle de Jour</td>
+                    <td>R$<%=simulacaoRec.RS_Mes_Revender_Amigos%>
+                    </td>
+                  </tr>
+                  <tr class="text-destaque1 text-destaque2">
+                    <td class="tabela-footer">Ganho Total Estimado Em Sua Parceria com a Cachaça Belle de Jour</td>
+                    <td class="tabela-footer">R$<%=simulacaoRec.RS_Mes_Total%>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="tabela-footer" colspan="2">*As participações nas vendas dos parceiros de nível superior a
+                      N2 são limitadas a
+                      90% do valor total das comissões.
+                    </th>
+                  </tr>
+                </tfoot>
+              </table>
+            </dd>
+          </article>
+        </dl>
+      </ol>
+    </section>
+    <section class="main__perguntas perguntas">
+      <h2>Perguntas Frequentes</h2>
+      <dl>
+        <dt class="lista__topico topico">Preciso Pagar Para Fazer Parte do Programa de Parcerias da Cachaça Belle de
+          Jour?
+
+        </dt>
+        <dd class="lista__detalhe detalhe">
+          <p class="text">Não.</p>
+          <p class="text">Recomendamos, sim, que você adquira uma amostra da Cachaça Belle de Jour para apresentar a
+            seus potenciais clientes, mas isto não é uma obrigação.</p>
+          <p class="text">Além disto, também temos vários materiais de divulgação disponíveis em nosso site (como
+            flyers, cupons, garrafas em miniatura e outros) que podem ser bastante úteis em sua venda, caso considere
+            oportuno.</p>
+        </dd>
+        <dt class="lista__topico topico">Qual a frequência dos pagamentos?
+
+        </dt>
+        <dd class="lista__detalhe detalhe">
+          <p class="text">Mensal.</p>
+          <p class="text">No primeiro dia útil do mês, realizamos levantamento com todas as vendas realizadas no mês
+            anterior, com o cálculo das comissões correspondentes, que será enviado por e-mail para nossos Parceiros.
+          </p>
+          <p class="text">O pagamento das respectivas comissões será realizado até o 10º (décimo) dia útil do mês.</p>
+        </dd>
+      </dl>
+    </section>
+    <section class="main__encerra encerra">
+      <p class="text">Caso tenha quaisquer dúvidas a respeito desta simulação, não hesite em entrar em contato via <a
+          href="https://link.cachacabelledejour.com.br/20211027-simulacao-whatsapp" target="_blank">whatsapp</a> e
+        ficaremos felizes em lhe auxiliar no que for preciso :)</p>
+      <p class="text">Caso tenha gostado dos resultados, seja bem vind@! Clique <a
+          href="https://link.cachacabelledejour.com.br/20211029-simulacao-cadastrar" target="_blank">aqui</a> e se
+        torne um parceiro da Cachaça Belle de Jour agora mesmo!</p>
+      <article class="encerra__call_to_action call_to_action">
+        <a class="call_to_action__botao botao"
+          href="https://link.cachacabelledejour.com.br/20211027-simulacao-whatsapp"><span class="botao__texto">Converse
+            Conosco
+            via Whatsapp</span></a>
+        <a class="call_to_action__botao botao"
+          href="https://link.cachacabelledejour.com.br/20211029-simulacao-cadastrar"><span class="botao__texto">Quero Me
+            Cadastrar Agora</span></a>
+      </article>
+
+      <p class="text">Atenciosamente,</p>
+      <p class="text">Cachaça Belle de Jour</p>
+    </section>
+
+
+  </main>
+</body>
+
+
+</html>

@@ -1,0 +1,194 @@
+.body {
+  font-family: system-ui;
+  background: #fff;
+  color: #260000;
+  text-align: center;
+  margin: 0;
+  font-family: Montserrat;
+  padding: 2% 10%;
+}
+
+.body__header {
+  margin: 0;
+  width: 100%;
+}
+
+.body__main {
+  margin: 0;
+  padding: 50px;
+}
+
+.botao {
+  background-color: #044E78;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.botao__texto {
+  align-self: center;
+  line-height: 1.5;
+}
+
+.call_to_action {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.call_to_action__botao {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 10px auto;
+  width: 40%;
+  min-width: 250px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.encerra__call_to_action {
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 5%;
+}
+
+.header__logo {
+  margin: auto;
+  width: 25%;
+  height: auto;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+.header__titulo {
+  margin: auto;
+  width: 75%;
+  max-width: 600px;
+}
+
+.lista {
+  padding: 0 0 0 15px;
+}
+
+.lista__detalhe {
+  margin: 0;
+}
+
+.lista__topico {
+  margin-top: 42px;
+}
+
+.lista__secao {
+  page-break-inside: avoid;
+}
+
+.logo {
+  padding: 5px;
+}
+
+.main__encerra {
+  width: 100%;
+}
+
+.tabela {
+  text-align: center;
+  height: 50px;
+  margin: auto;
+}
+
+.tabela-linha {
+  border-bottom: 1px dotted black;
+  padding: 10px;
+}
+
+.tabela-sup {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.tabela-footer {
+  border-top: 1px solid black;
+  padding: 10px;
+}
+
+.text {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-calculo {
+  line-height: 1;
+  text-align: right;
+  padding-right: 20%;
+}
+
+.text-destaque1 {
+  text-align: center;
+}
+
+.text-destaque2 {
+  font-weight: bold;
+}
+
+.text-resultado {
+  font-weight: bold;
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
+
+.titulo {
+  font-size: calc(12px + 1vw);
+  line-height: calc(18px + 1.5vw);
+  padding: 20px 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.topico {
+  text-align: justify;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+@page {
+  margin: 15mm;
+}
+
+@media print {
+  .body {
+    padding: 0;
+  }
+  .body__header {
+    height: auto;
+  }
+  .body__main {
+    padding: 0;
+  }
+  .header {
+    padding: 5mm;
+  }
+  .header__logo {
+    max-width: 30mm;
+  }
+  .header__titulo {
+    max-width: 130mm;
+  }
+  .titulo {
+    font-size: 5mm;
+    line-height: 7.5mm;
+    padding: 5mm;
+  }
+}
