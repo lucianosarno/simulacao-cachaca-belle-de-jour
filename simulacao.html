@@ -94,10 +94,11 @@
               <p class="text text-calculo">
                 x <%=simulacaoRec.Garrafas_Garcom_Mes_Representante%> vendas/garçom/mês</p>
               <p class="text text-calculo">
-                x <%=produtoRefRec.Preco_de_Venda%> R$/venda x <%=simulacaoRec.MMN_Nivel_3%>%</p>
+                x R$<%=produtoRefRec.Preco_de_Venda%> /venda</p>
               <p class="text text-calculo">
-                = <span class="text text-calculo text-destaque2">
-                  R$<%=simulacaoRec.RS_Mes_Iniciar_Parcerias%> / mês</span>
+                x <%=simulacaoRec.MMN_Nivel_3%>%</p>
+              <p class="text text-calculo">
+                <span class="text-resultado"> = R$<%=simulacaoRec.RS_Mes_Iniciar_Parcerias%> / mês</span>
               </p>
             </dd>
           </article>
