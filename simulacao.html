@@ -240,13 +240,41 @@
         <li>Total de Ganhos</li>
       </dt>
       <dd class="lista__detalhe detalhe">
-        <p class="text">Por último, você também recebe um percentual de <%=simulacaoRec.MMN_Nivel_1%>% em todas as
-            vendas realizadas em
-            nosso site através do seu código promocional de afiliado.</p>
         <p class="text">Considerando todos os dados mencionados neste documento, estimamos seus ganhos totais sendo
-          parceiro da Cachaça Belle de Jour em R$<span class="text-destaque">
-            R$<%=simulacaoRec.RS_Mes_Total%>
-          </span>/mês.</p>
+          parceiro da Cachaça Belle de Jour:
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de Parceria</th>
+              <th>Estimativa de Ganho Mensal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Iniciando Parcerias Entre a Cachaça Belle de Jour e Estabelecimentos Comerciais</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Iniciar_Parcerias%>
+              </td>
+            </tr>
+            <tr>
+              <td>Revendendo a Cachaça Belle de Jour Em Seu EstabelecimentoD(Por Dose)</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Revender_Local_Dose%>
+              </td>
+            </tr>
+            <tr>
+              <td>Revendendo o Drink La Belle Em Seu Estabelecimento</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Revender_Local_Drink%>
+              </td>
+            </tr>
+            <tr>
+              <td>Revendendo Garrafas da Cachaça Belle de Jour em Seu Estabelecimento</td>
+              <td>R$<%=simulacaoRec.RS_Mes_Revender_Local_Garrafas%>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        em R$<span class="text-destaque">
+          R$<%=simulacaoRec.RS_Mes_Total%>
+        </span>/mês.</p>
       </dd>
     </ol>
     <p class="text">Caso tenha quaisquer dúvidas a respeito desta simulação, não hesite em entrar em contato via <a
