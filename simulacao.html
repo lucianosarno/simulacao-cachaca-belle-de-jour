@@ -244,17 +244,51 @@
                   <%=simulacaoRec.Pretende_Divulgar%>
                 </span>.
               </p>
-              <p class="text">Considerando que seu estabelecimento possua <%=simulacaoRec.Numero_de_Garcons%> garçons, e
-                  que
-                  cada um deles efetue R$<%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês com o código promocional, os
+              <p class="text">Considerando:</p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Numero_de_Garcons%> garçons
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_1%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%> /mês
+                </span>
+              </p>
+              <p class="text">Ou seja, caso estabelecimento possua <%=simulacaoRec.Numero_de_Garcons%> garçons e cada um
+                  deles efetue <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês em nosso site com o código promocional,
+                    os
                     ganhos
                     do seu
                     estabelecimento
                     com a divulgação do site da Cachaça Belle de Jour é de <span class="text-destaque1 text-destaque2">
-                      R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>
+                      R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>/mês
                     </span>.</p>
-              <p class="text">Além disso, no cenário descrito acima, cada um de seus garçons receberá uma participação
-                <span class="text-destaque1 text-destaque2"> R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%></span>.
+              <p class="text">Além disto, em relação aos garçons do seu estabelecimento, que receberão uma participação
+                de <%=simulacaoRec.MMN_Nivel_0%>% sobre suas próprias vendas:</p>
+
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%> /mês
+                </span>
+              </p>
+              <p class="text">Deste modo, no cenário descrito acima, cada um de seus garçons receberá uma participação
+                de <span class="text-destaque1 text-destaque2"> R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%>
+                    /mês</span>.
               </p>
             </dd>
           </article>
@@ -314,6 +348,19 @@
                     indicados
                     diretamente por você (chamados parceiros N1).
                 </li>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_0%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%> /mês
+                  </span>
+                </p>
                 <li class="text">
                   R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%> referente à sua participação nas vendas dos
                     parceiros
