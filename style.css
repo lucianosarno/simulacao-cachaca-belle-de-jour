@@ -56,6 +56,19 @@
 
 .tabela {
   text-align: center;
+  height: 50px;
+}
+
+.tabela-linha {
+  border-bottom: 1px dotted black;
+}
+
+.tabela-sup {
+  border-bottom: 1px solid black;
+}
+
+.tabela-footer {
+  border-top: 1px solid black;
 }
 
 .text {
@@ -86,18 +99,6 @@
 * {
   /* border: 1px solid red; */
   box-sizing: border-box;
-}
-
-body {
-  border: 1px solid red;
-}
-
-header {
-  border: 1px solid green;
-}
-
-main {
-  border: 1px solid blue;
 }
 
 @page {
