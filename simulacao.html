@@ -125,7 +125,7 @@
                 </span>
               </p>
               <p class="text">Para cada dose, seu lucro será de:</p>
-              <p class="text text-calculo"> x R$<%=simulacaoRec.RS_Dose%> /dose (venda)
+              <p class="text text-calculo">R$<%=simulacaoRec.RS_Dose%> /dose (venda)
               </p>
               <p class="text text-calculo"> - <%=RS_Dose_Custo%> /dose (custo)
               </p>
@@ -267,7 +267,8 @@
                     ganhos
                     do seu
                     estabelecimento
-                    com a divulgação do site da Cachaça Belle de Jour é de <span class="text-destaque1 text-destaque2">
+                    com a divulgação do site da Cachaça Belle de Jour serão de <span
+                      class="text-destaque1 text-destaque2">
                       R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Estabelecimento%>/mês
                     </span>.</p>
               <p class="text">Além disto, em relação aos garçons do seu estabelecimento, que receberão uma participação
@@ -343,36 +344,80 @@
               <p class="text">Neste caso, seus ganhos mensais serão:</p>
               <ul>
                 <li class="text">
-                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%> referente à sua participação nas vendas dos
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%>/mês referente à sua participação nas vendas
+                    dos
                     parceiros
                     indicados
-                    diretamente por você (chamados parceiros N1).
+                    diretamente por você (chamados parceiros N1):
                 </li>
+                <p class="text text-calculo">
+                  <%=simulacaoRec.Numero_de_Parceiros%> parceiros N1
+                </p>
                 <p class="text text-calculo"> x
-                  <%=simulacaoRec.Garrafas_Garcom_Mes%> vendas/mês
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
                 </p>
                 <p class="text text-calculo"> x
                   <%=produtoRefRec.Preco_de_Venda%> R$/venda
                 </p>
                 <p class="text text-calculo"> x
-                  <%=simulacaoRec.MMN_Nivel_0%>%
+                  <%=simulacaoRec.MMN_Nivel_1%>%
                 </p>
                 <p class="text text-calculo"><span class="text-resultado"> =
-                    R$<%=simulacaoRec.RS_Mes_Divulgar_Site_Garcons%> /mês
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%> /mês
                   </span>
                 </p>
                 <li class="text">
-                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%> referente à sua participação nas vendas dos
+                  R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%>/mês referente à sua participação nas vendas
+                    dos
                     parceiros
                     N2.
                 </li>
+                <p class="text text-calculo">Metade dos <%=simulacaoRec.Numero_de_Parceiros%> parceiros N1
+                    indicam um total de:
+                </p>
+                <p class="text text-calculo">
+                  <%=nParceirosN2%> parceiros N2
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_2%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%> /mês
+                  </span>
+                </p>
                 <li class="text">
                   R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%> referente à sua participação nas vendas dos
                     parceiros
                     N3.
                 </li>
+                <p class="text text-calculo">Metade dos <%=nParceirosN2%> parceiros N2
+                    indicam um total de:
+                </p>
+                <p class="text text-calculo">
+                  <%=nParceirosN3%> parceiros N3
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.Garrafas_Parceiro_Mes%> vendas/parceiro/mês
+                </p>
+                <p class="text text-calculo"> x
+                  <%=produtoRefRec.Preco_de_Venda%> R$/venda
+                </p>
+                <p class="text text-calculo"> x
+                  <%=simulacaoRec.MMN_Nivel_3%>%
+                </p>
+                <p class="text text-calculo"><span class="text-resultado"> =
+                    R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%> /mês
+                  </span>
+                </p>
               </ul>
-              <p class="text">Deste modo, seus ganhos totais serão de <span class="text-destaque1 text-destaque2">
+              <p class="text">Deste modo, considerando os valores acima, o total de seus ganhos com a indicação de novos
+                parceiros <span class="text-destaque1 text-destaque2">
                   R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_Total%>
                 </span>.</p>
             </dd>
