@@ -85,7 +85,7 @@
   margin-top: 42px;
 }
 
-lista__secao {
+.lista__secao {
   page-break-inside: avoid;
 }
 
@@ -124,8 +124,16 @@ lista__secao {
   line-height: 1.5;
 }
 
-.text-destaque {
+.text-calculo {
+  line-height: 1;
+  text-align: right;
+}
+
+.text-destaque1 {
   text-align: center;
+}
+
+.text-destaque2 {
   font-weight: bold;
 }
 
