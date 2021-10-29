@@ -112,27 +112,39 @@
               <p class="text">Sobre este item, sua resposta foi: <span class="text-destaque1 text-destaque2">
                   <%=simulacaoRec.Pretende_Iniciar_Parcerias%>
                 </span>.</p>
-              <p class="text">Uma estimativa dos lucros que podem ser obtidos com a venda de doses da Cachaça Belle de
-                Jour
-                é
-                feita a seguir, considerando:</p>
-              <ul>
-                <li class="text">Uma média de <%=simulacaoRec.Doses_Mes%> doses vendidas mensalmente.</li>
-                <li class="text">Valor de R$<%=simulacaoRec.RS_Dose%> por dose.</li>
-              </ul>
+
               <p class="text">O custo de cada dose, para seu estabelecimento, será:</p>
-              <p class="text text-calculo">R$<%=produtoRefRec.Preco_de_Venda%>
+              <p class="text text-calculo">
+                <%=doseVolumeMl%> ml/dose
               </p>
-              <p class="text text-calculo">/ <%=produtoRefRec.Volume_ml%> ml
+              <p class="text text-calculo"> x R$<%=produtoRefRec.Preco_de_Venda%> /garrafa
+              </p>
+              <p class="text text-calculo"> ÷ <%=produtoRefRec.Volume_ml%> ml
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$<%=RS_Dose_Custo%> /dose (custo)
+                </span>
+              </p>
+              <p class="text">Para cada dose, seu lucro será de:</p>
+              <p class="text text-calculo"> x R$<%=simulacaoRec.RS_Dose%> /dose (venda)
+              </p>
+              <p class="text text-calculo"> - <%=RS_Dose_Custo%> /dose (custo)
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> = R$<%=RS_Dose_Lucro%> /dose (lucro)
+                </span>
+              </p>
+              <p class="text">Considerando o cálculo:</p>
+              <p class="text text-calculo">R$<%=RS_Dose_Lucro%> /dose
+              </p>
+              <p class="text text-calculo"> x <%=simulacaoRec.Doses_Mes%> doses/mês
               </p>
               <p class="text text-calculo"><span class="text-resultado"> = R$
-                  <%=(produtoRefRec.Preco_de_Venda / produtoRefRec.Volume_ml).round(2)%>
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Dose%> /mês
                 </span>
               </p>
               <p class="text">Neste caso, seu ganho com a revenda de doses da Cachaça Belle de Jour é de: <span
-                  class="text-destaque1 text-destaque2">
-                  R$<%=simulacaoRec.RS_Mes_Revender_Local_Dose%></span>.</p>
-
+                  class="text-destaque2"> R$
+                  <%=simulacaoRec.RS_Mes_Revender_Local_Dose%> /mês
+                </span>.</p>
             </dd>
           </article>
           <article class="lista__secao">
