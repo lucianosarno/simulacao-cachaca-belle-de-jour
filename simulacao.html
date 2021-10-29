@@ -434,12 +434,28 @@
                   <%=simulacaoRec.Pretende_Revender_Amigos%>
                 </span>.
               </p>
+              <p class="text">
+                Considere o cálculo a seguir:
+              </p>
+              <p class="text text-calculo">
+                <%=simulacaoRec.Garrafas_Mes_Amigos%> vendas/mês
+              </p>
+              <p class="text text-calculo"> x
+                <%=produtoRefRec.Preco_de_Venda%> R$/venda
+              </p>
+              <p class="text text-calculo"> x
+                <%=simulacaoRec.MMN_Nivel_0%>%
+              </p>
+              <p class="text text-calculo"><span class="text-resultado"> =
+                  R$<%=simulacaoRec.RS_Mes_Revender_Amigos%> /mês
+                </span>
+              </p>
               <p class="text">Caso sejam feitas <%=simulacaoRec.Garrafas_Mes_Amigos%> vendas por mês com uso do seu
                   código,
                   seus ganhos serão
                   de <span class="text-destaque1 text-destaque2">
-                    R$<%=simulacaoRec.RS_Mes_Revender_Amigos%>
-                  </span>/mês.</p>
+                    R$<%=simulacaoRec.RS_Mes_Revender_Amigos%>/mês
+                  </span>.</p>
             </dd>
           </article>
           <article class="lista__secao">
@@ -487,8 +503,18 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="tabela-linha">Indicando Outros Parceiros da Cachaça Belle de Jour</td>
-                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_Total%>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N1</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N1%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N2</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N2%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tabela-linha">Participação nas vendas de seus parceiros N3</td>
+                    <td class="tabela-linha">R$<%=simulacaoRec.RS_Mes_Incentivar_Outras_Pessoas_N3%>
                     </td>
                   </tr>
                   <tr>
